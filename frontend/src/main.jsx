@@ -9,7 +9,7 @@ import Home from "./routes/home.jsx";
 import ErrorPage from "./error-page.jsx";
 import Note from "./routes/Notes.jsx";
 import CreateArea from "./components/CreateArea.jsx";
-import UpdateArea from "./routes/UpdateArea.jsx";
+import OutletArea from "./routes/OutletArea.jsx";
 
 const router = createBrowserRouter([
   {
@@ -30,8 +30,8 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "/home/notes",
-        element: <UpdateArea />,
+        path: "home/notes/:notesID",
+        element: <OutletArea />,
       },
     ],
   },
